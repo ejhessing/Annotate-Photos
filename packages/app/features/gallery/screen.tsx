@@ -68,11 +68,11 @@ export function GalleryScreen() {
         </MotiLink>
       </View>
       <View sx={{ height: 32 }} />
-      {!showCamera && <Row style={{ height: '600px', width: '100%' }}>
+      {!showCamera && <Row style={{ flex: 1, width: '100%', justifyContent: 'center', flexWrap: 'wrap' }}>
         {images &&
           images.map((image) => {
             return (
-              <View key={`${image}`} style={{ flex: 1 }}>
+              <View key={`${image}`} style={{ flex: 1, width: '400px', maxHeight: '400px', margin: '15px', flexBasis: '40%', borderColor: 'red', borderWidth: '3px'  }}>
                 <Image source={{ uri: image }} style={{ flex: 1 }} />
                 {hasMediaLibraryPermission && (
                   <Button
