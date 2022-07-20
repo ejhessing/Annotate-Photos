@@ -1,5 +1,4 @@
-import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
-import { TextLink } from 'solito/link'
+import { A, H1, P, Row, Text, useSx, View } from 'dripsy'
 import { MotiLink } from 'solito/moti'
 
 export function HomeScreen() {
@@ -9,17 +8,15 @@ export function HomeScreen() {
     <View
       sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
     >
-      <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
+      <H1 sx={{ fontWeight: '800' }}>Image Annotation Example Project</H1>
       <View sx={{ maxWidth: 600 }}>
         <P sx={{ textAlign: 'center' }}>
-          Here is a basic starter to show you how you can navigate from one
-          screen to another. This screen uses the same code on Next.js and React
-          Native.
+          Simple project using React Native Expo + NextJS to create a single code base for native and web.
         </P>
         <P sx={{ textAlign: 'center' }}>
-          Solito is made by{' '}
+          This project is made by{' '}
           <A
-            href="https://twitter.com/fernandotherojo"
+            href="https://www.ejhessing.com"
             // @ts-expect-error react-native-web only types
             hrefAttrs={{
               target: '_blank',
@@ -27,24 +24,16 @@ export function HomeScreen() {
             }}
             sx={{ color: 'blue' }}
           >
-            Fernando Rojo
+            Ej Hessing
           </A>
           .
         </P>
       </View>
       <View sx={{ height: 32 }} />
       <Row>
-        <TextLink
-          href="/user/fernando"
-          textProps={{
-            style: sx({ fontSize: 16, fontWeight: 'bold', color: 'blue' }),
-          }}
-        >
-          Regular Link
-        </TextLink>
         <View sx={{ width: 32 }} />
         <MotiLink
-          href="/user/fernando"
+          href="/gallery"
           animate={({ hovered, pressed }) => {
             'worklet'
 
@@ -62,7 +51,7 @@ export function HomeScreen() {
             selectable={false}
             sx={{ fontSize: 16, color: 'black', fontWeight: 'bold' }}
           >
-            Moti Link
+            Go to Image Gallery
           </Text>
         </MotiLink>
       </Row>
