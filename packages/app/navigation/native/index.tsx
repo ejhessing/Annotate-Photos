@@ -6,7 +6,7 @@ import { UserDetailScreen } from '../../features/user/detail-screen'
 
 const Stack = createNativeStackNavigator<{
   home: undefined
-  gallery: undefined
+  gallery: undefined 
   'user-detail': {
     id: string
   }
